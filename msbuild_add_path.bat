@@ -5,4 +5,6 @@ setlocal enabledelayedexpansion
 for %%i in %result% do (
   set msbuild_dir=%%i
 )
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /f /v Path /t REG_SZ /d "%PATH%;%msbuild_dir%"
+echo %msbuild_dir%
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /f /v Path /t REG_SZ /d "%PATH%%msbuild_dir%"
+echo %PATH%
