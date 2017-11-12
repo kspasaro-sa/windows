@@ -1,4 +1,4 @@
-REM Install vs_buildtools for command prompt
+REM Install vs_buildtools for command prompt (msbuild)
 set "vs_buildtools_src=https://download.microsoft.com/download/E/E/D/EEDF18A8-4AED-4CE0-BEBE-70A83094FC5A/BuildTools_Full.exe"
 set "vs_buildtools_path=%PROGRAMFILES%\vs_buildtools"
 set "vs_buildtools_installer=vs-buildtools-installer.exe"
