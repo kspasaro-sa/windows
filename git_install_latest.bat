@@ -4,6 +4,6 @@ set "git_path=%PROGRAMFILES%\Git"
 set "git_installer=git-installer.exe"
 if not exist "%git_path%" mkdir "%git_path%"
 powershell -Command "(New-Object Net.WebClient).DownloadFile('%git_src%', '%git_path%\%git_installer%')"
-set "PATH=%PATH%;%git_path%;%git_path%\bin"
+set "PATH=%PATH%;%git_path%;%git_path%\bin;"
 %git_installer% /verysilent
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v Path /t REG_SZ /d "%PATH%%PROGRAMFILES%\Git\bin" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v Path /t REG_SZ /d "%PATH%" /f
