@@ -36,5 +36,5 @@ set iis_features=^
  IIS-FTPSvc^
 )
 
-for %%f in %iis_features% do DISM /online /enable-feature /featurename:%%f
+for %%f in %iis_features% do DISM /online /enable-feature /all /featurename:%%f
 
