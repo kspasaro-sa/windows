@@ -4,6 +4,6 @@ set "vs_buildtools_path=%PROGRAMFILES%\vs_buildtools"
 set "vs_buildtools_installer=vs-buildtools-installer.exe"
 if not exist "%vs_buildtools_path%" mkdir "%vs_buildtools_path%"
 powershell -Command "(New-Object Net.WebClient).DownloadFile('%vs_buildtools_src%', '%vs_buildtools_path%\%vs_buildtools_installer%')"
-%vs_buildtools_installer% --quiet --full
 set "PATH=%PATH%;%vs_buildtools_path%"
+%vs_buildtools_installer% --quiet --full
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v Path /t REG_SZ /d "%PATH%" /f
